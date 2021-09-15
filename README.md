@@ -5,11 +5,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It uses [Firebase Authentication](https://firebase.google.com/products/auth) for logging in and signing up and [Reactstrap](https://reactstrap.github.io/) for styling.
 
+This app has:
+
+- Signup
+- Login
+- Change password
+
 Some features I would add in the future are:
 
-- form validation
-- testing
-- error handling
+- Form validation
+- Testing
+- Error handling
 
 ## Available Scripts
 
