@@ -12,6 +12,8 @@ import {
   Input,
 } from "reactstrap";
 
+const API_KEY = process.env.REACT_APP_AUTH_API_KEY;
+
 const Login = () => {
   const history = useHistory();
   const authCtx = useContext(AuthContext);
@@ -32,7 +34,7 @@ const Login = () => {
 
     try {
       const res = await fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDnPIfy83KDsLc_qK8WIEJwkDJbQplsOY0",
+        `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,
         {
           method: "POST",
           body: JSON.stringify({

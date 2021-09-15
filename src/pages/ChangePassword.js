@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import AuthContext from "..//store/auth";
+import AuthContext from "../store/auth";
 import {
   Container,
   Row,
@@ -12,6 +12,8 @@ import {
   Input,
   FormText,
 } from "reactstrap";
+
+const API_KEY = process.env.REACT_APP_AUTH_API_KEY;
 
 const ChangePassword = () => {
   const history = useHistory();
@@ -37,8 +39,8 @@ const ChangePassword = () => {
     }
 
     try {
-      const res = fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDnPIfy83KDsLc_qK8WIEJwkDJbQplsOY0",
+      await fetch(
+        `https://identitytoolkit.googleapis.com/v1/accounts:update?key=${API_KEY}`,
         {
           method: "POST",
           body: JSON.stringify({
