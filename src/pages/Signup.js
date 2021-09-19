@@ -63,7 +63,7 @@ const Signup = () => {
       authCtx.setName(data.displayName);
       history.replace("/");
     } catch (e) {
-      alert(e);
+      alert("Signup failed.");
     }
   };
 

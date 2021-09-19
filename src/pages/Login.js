@@ -57,7 +57,7 @@ const Login = () => {
       authCtx.setName(data.displayName);
       history.replace("/");
     } catch (e) {
-      alert(e);
+      alert("Authentication failed.");
     }
   };
 
