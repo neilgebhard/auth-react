@@ -1,9 +1,8 @@
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import { AuthContextProvider } from './store/auth';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import { AuthContextProvider } from "./store/auth";
+import "bootstrap/dist/css/bootstrap.min.css";
+import App from "./App";
 
 ReactDOM.render(
   <AuthContextProvider>
@@ -11,5 +10,5 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </AuthContextProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
